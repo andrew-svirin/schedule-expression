@@ -1,0 +1,23 @@
+# Select image from https://hub.docker.com/_/php/
+image: php:7.3-cli
+
+# Select what we should cache between builds
+cache:
+    paths:
+        - vendor/
+
+before_script:
+    # Install unzip for Composer
+    - apt-get update
+    - apt-get install unzip
+    # Install and run Composer
+    - curl -sS https://getcomposer.org/installer | php
+    - php composer.phar install
+
+# Run our tests
+# If Xdebug was installed you can generate a coverage report and see code coverage metrics.
+test:
+    script:
+        - vendor/bin/phpcs
+        - vendor/bin/phpstan
+        - vendor/bin/phpunit --coverage-text --colors=never

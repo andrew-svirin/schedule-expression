@@ -1,0 +1,10 @@
+parameters:
+	checkMissingIterableValueType: false
+	checkGenericClassInNonGenericObjectType: false
+	level: 9
+	paths:
+		- src
+	ignoreErrors:
+		-
+			message: '#has no return type specified#'
+			path: src/Components/Service/ServiceLocator.php

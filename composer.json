@@ -1,0 +1,28 @@
+{
+  "name": "andrew-svirin/schedule-expression",
+  "type": "library",
+  "description": "PHP library to encode/decode schedule by expression",
+  "require": {
+    "php": "^7.3"
+  },
+  "require-dev": {
+    "phpstan/phpstan": "^1",
+    "phpunit/phpunit": "^9",
+    "squizlabs/php_codesniffer": "^3"
+  },
+  "autoload": {
+    "psr-4": {
+      "AndrewSvirin\\ScheduleExpression\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "AndrewSvirin\\ScheduleExpression\\Tests\\": "tests"
+    }
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
